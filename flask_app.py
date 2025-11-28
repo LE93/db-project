@@ -48,7 +48,6 @@ def webhook():
 
 # Auth routes
 @app.get("/users")
-@login_required
 def users():
     return "Hallo from users"
 
