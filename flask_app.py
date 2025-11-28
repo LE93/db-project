@@ -49,7 +49,7 @@ def webhook():
 # Auth routes
 @app.get("/users")
 def users():
-    return render_template("users.html")
+    return render_template("users.html", users = ["User a", "User b", "User c"])
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
