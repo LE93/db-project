@@ -47,11 +47,6 @@ def webhook():
     return 'Unathorized', 401
 
 # Auth routes
-@app.get("/users")
-def users():
-    users = db_read("SELECT username FROM users", ())
-    return render_template("users.html", users = users)
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     error = None
