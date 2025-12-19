@@ -119,7 +119,7 @@ def logout():
 def index():
     # GET
     if request.method == "GET":
-        todos = db_read("SELECT id, content, due FROM todos WHERE user_id=%s ORDER BY due", (current_user.id,))
+        todos = db_read("SELECT id, content, due FROM todos", ())
         return render_template("main_page.html", todos=todos)
 
     # POST
