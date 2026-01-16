@@ -79,7 +79,7 @@ def login():
         footer_link_label="Registrieren"
     )
 
-
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     error = None
